@@ -13,4 +13,6 @@ public interface ICursoService {
     public Curso findCurso(Long id);
     
     public List<Curso> cursosJava();
+    
+    public void editarCurso(Curso curso);
 }

@@ -2,6 +2,7 @@ package com.app.estudiante.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -32,8 +33,8 @@ public class Tema implements Serializable{
     
     String descripcion;
     
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "fk_curso")
+    @ManyToOne( cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_curso", nullable=false)//nullable para que halla la relación
     Curso curso;
     
 }

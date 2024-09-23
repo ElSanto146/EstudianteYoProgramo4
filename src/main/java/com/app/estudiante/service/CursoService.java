@@ -34,5 +34,10 @@ public class CursoService implements ICursoService{
         List<Curso> listaCurso1 = cursoRepo.cursosJava();
         return listaCurso1;
     }
+
+    @Override
+    public void editarCurso(Curso curso) {
+        cursoRepo.save(curso);
+    }
     
 }
